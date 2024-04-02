@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DbTasarimRehberimModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TblCizim">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ResimAd" Type="nvarchar" MaxLength="20" />
+          <Property Name="Aciklama" Type="nvarchar" MaxLength="50" />
+          <Property Name="Resim" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="TblMalzemeler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MalzemeAd" Type="nvarchar" MaxLength="50" />
+          <Property Name="MalzemeTur" Type="nvarchar" MaxLength="20" />
+          <Property Name="Yogunluk" Type="int" />
+          <Property Name="Aciklama" Type="nvarchar" MaxLength="200" />
+          <Property Name="MalzemeResim" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="TblMetraj">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Aciklama" Type="nvarchar" MaxLength="50" />
+          <Property Name="MetrajMalzeme" Type="nvarchar" MaxLength="20" />
+          <Property Name="Adet" Type="int" />
+          <Property Name="ToplamKg" Type="int" />
+        </EntityType>
+        <EntityType Name="TblPlanlarim">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PlanAd" Type="nvarchar" MaxLength="20" />
+          <Property Name="PlanAciklama" Type="nvarchar" MaxLength="100" />
+          <Property Name="PlanTur" Type="nvarchar" MaxLength="20" />
+          <Property Name="Durum" Type="bit" />
+          <Property Name="TarihStart" Type="date" />
+          <Property Name="Saat" Type="char" MaxLength="5" />
+          <Property Name="TarihFinish" Type="date" />
+        </EntityType>
+        <EntityContainer Name="DbTasarimRehberimModelStoreContainer">
+          <EntitySet Name="TblCizim" EntityType="Self.TblCizim" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblMalzemeler" EntityType="Self.TblMalzemeler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblMetraj" EntityType="Self.TblMetraj" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblPlanlarim" EntityType="Self.TblPlanlarim" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DbTasarimRehberimModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TblCizim">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ResimAd" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Aciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Resim" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TblMalzemeler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MalzemeAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MalzemeTur" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Yogunluk" Type="Int32" />
+          <Property Name="Aciklama" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="MalzemeResim" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TblMetraj">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Aciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MetrajMalzeme" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Adet" Type="Int32" />
+          <Property Name="ToplamKg" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TblPlanlarim">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PlanAd" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PlanAciklama" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PlanTur" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Durum" Type="Boolean" />
+          <Property Name="TarihStart" Type="DateTime" Precision="0" />
+          <Property Name="Saat" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="TarihFinish" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityContainer Name="DbTasarimRehberimEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TblCizim" EntityType="Self.TblCizim" />
+          <EntitySet Name="TblMalzemeler" EntityType="Self.TblMalzemeler" />
+          <EntitySet Name="TblMetraj" EntityType="Self.TblMetraj" />
+          <EntitySet Name="TblPlanlarim" EntityType="Self.TblPlanlarim" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DbTasarimRehberimModelStoreContainer" CdmEntityContainer="DbTasarimRehberimEntities">
+          <EntitySetMapping Name="TblCizim">
+            <EntityTypeMapping TypeName="DbTasarimRehberimModel.TblCizim">
+              <MappingFragment StoreEntitySet="TblCizim">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ResimAd" ColumnName="ResimAd" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="Resim" ColumnName="Resim" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblMalzemeler">
+            <EntityTypeMapping TypeName="DbTasarimRehberimModel.TblMalzemeler">
+              <MappingFragment StoreEntitySet="TblMalzemeler">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MalzemeAd" ColumnName="MalzemeAd" />
+                <ScalarProperty Name="MalzemeTur" ColumnName="MalzemeTur" />
+                <ScalarProperty Name="Yogunluk" ColumnName="Yogunluk" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="MalzemeResim" ColumnName="MalzemeResim" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblMetraj">
+            <EntityTypeMapping TypeName="DbTasarimRehberimModel.TblMetraj">
+              <MappingFragment StoreEntitySet="TblMetraj">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="MetrajMalzeme" ColumnName="MetrajMalzeme" />
+                <ScalarProperty Name="Adet" ColumnName="Adet" />
+                <ScalarProperty Name="ToplamKg" ColumnName="ToplamKg" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblPlanlarim">
+            <EntityTypeMapping TypeName="DbTasarimRehberimModel.TblPlanlarim">
+              <MappingFragment StoreEntitySet="TblPlanlarim">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="PlanAd" ColumnName="PlanAd" />
+                <ScalarProperty Name="PlanAciklama" ColumnName="PlanAciklama" />
+                <ScalarProperty Name="PlanTur" ColumnName="PlanTur" />
+                <ScalarProperty Name="Durum" ColumnName="Durum" />
+                <ScalarProperty Name="TarihStart" ColumnName="TarihStart" />
+                <ScalarProperty Name="Saat" ColumnName="Saat" />
+                <ScalarProperty Name="TarihFinish" ColumnName="TarihFinish" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

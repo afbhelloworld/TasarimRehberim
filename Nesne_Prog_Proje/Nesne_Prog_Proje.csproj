@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{94DC561C-24A6-4369-AC69-C795557C26E1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Nesne_Prog_Proje</RootNamespace>
+    <AssemblyName>Nesne_Prog_Proje</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v23.1.Core, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Drawing.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v23.1.Core, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v23.1.Core, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v23.1.UI, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v23.1.UI, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v23.1.Wizard, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.Ribbon, Version=2.0.0.0, Culture=neutral, PublicKeyToken=928736e248aa81f9, processorArchitecture=MSIL">
+      <HintPath>..\packages\RibbonWinForms.5.0.1.1\lib\net471\System.Windows.Forms.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Circle.cs" />
+    <Compile Include="Entities\Ellipse.cs" />
+    <Compile Include="Entities\EntityObject.cs" />
+    <Compile Include="Entities\EntityType.cs" />
+    <Compile Include="Entities\Line.cs" />
+    <Compile Include="Entities\LwPolyline.cs" />
+    <Compile Include="Entities\LwPolylineVertex.cs" />
+    <Compile Include="Entities\Point.cs" />
+    <Compile Include="Entities\Arc.cs" />
+    <Compile Include="Entities\PolylineTypeFlags.cs" />
+    <Compile Include="EntityForms\SetPolygonValuesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntityForms\SetPolygonValuesForm.Designer.cs">
+      <DependentUpon>SetPolygonValuesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\TblCizim.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\TblMalzemeler.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\TblMetraj.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\TblPlanlarim.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar2\FrmBosDaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar2\FrmBosDaire.Designer.cs">
+      <DependentUpon>FrmBosDaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar2\FrmBosKare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar2\FrmBosKare.Designer.cs">
+      <DependentUpon>FrmBosKare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar2\FrmDoluDaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar2\FrmDoluDaire.Designer.cs">
+      <DependentUpon>FrmDoluDaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar2\FrmDoluKare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar2\FrmDoluKare.Designer.cs">
+      <DependentUpon>FrmDoluKare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar2\FrmI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar2\FrmI.Designer.cs">
+      <DependentUpon>FrmI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar2\FrmL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar2\FrmL.Designer.cs">
+      <DependentUpon>FrmL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar2\FrmU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar2\FrmU.Designer.cs">
+      <DependentUpon>FrmU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FrmAnaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FrmAnaForm.Designer.cs">
+      <DependentUpon>FrmAnaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FrmHesapMakinesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FrmHesapMakinesi.Designer.cs">
+      <DependentUpon>FrmHesapMakinesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FrmMalzemeEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FrmMalzemeEkle.Designer.cs">
+      <DependentUpon>FrmMalzemeEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FrmMalzemeler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FrmMalzemeler.Designer.cs">
+      <DependentUpon>FrmMalzemeler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FrmMetraj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FrmMetraj.Designer.cs">
+      <DependentUpon>FrmMetraj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FrmPlanListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FrmPlanListesi.Designer.cs">
+      <DependentUpon>FrmPlanListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FrmYeniPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FrmYeniPlan.Designer.cs">
+      <DependentUpon>FrmYeniPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\GraphicsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\GraphicsForm.Designer.cs">
+      <DependentUpon>GraphicsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsExtension.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Methods\Method.cs" />
+    <Compile Include="metrajHesapla.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Vector2.cs" />
+    <Compile Include="Vector3.cs" />
+    <EmbeddedResource Include="EntityForms\SetPolygonValuesForm.resx">
+      <DependentUpon>SetPolygonValuesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar2\FrmBosDaire.resx">
+      <DependentUpon>FrmBosDaire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar2\FrmBosKare.resx">
+      <DependentUpon>FrmBosKare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar2\FrmDoluDaire.resx">
+      <DependentUpon>FrmDoluDaire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar2\FrmDoluKare.resx">
+      <DependentUpon>FrmDoluKare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar2\FrmI.resx">
+      <DependentUpon>FrmI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar2\FrmL.resx">
+      <DependentUpon>FrmL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar2\FrmU.resx">
+      <DependentUpon>FrmU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FrmAnaForm.resx">
+      <DependentUpon>FrmAnaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FrmHesapMakinesi.resx">
+      <DependentUpon>FrmHesapMakinesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FrmMalzemeEkle.resx">
+      <DependentUpon>FrmMalzemeEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FrmMalzemeler.resx">
+      <DependentUpon>FrmMalzemeler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FrmMetraj.resx">
+      <DependentUpon>FrmMetraj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FrmPlanListesi.resx">
+      <DependentUpon>FrmPlanListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FrmYeniPlan.resx">
+      <DependentUpon>FrmYeniPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\GraphicsForm.resx">
+      <DependentUpon>GraphicsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="Entity\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Entity\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-square-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-circle-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-l-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-u-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kareeeeeeeeee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-circle-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-l-75.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-l-70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-u-75.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-l-64%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-i-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-i-70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-circle-73.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kareeeeeeeeee1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Entity\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Entity\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\icons8-zoom-out-64.png" />
+    <None Include="Resources\icons8-zoom-in-64.png" />
+    <None Include="Resources\palette_32x32.png" />
+    <None Include="Resources\Line.PNG" />
+    <None Include="Resources\ARC.PNG" />
+    <None Include="Resources\cir.PNG" />
+    <None Include="Resources\elp.PNG" />
+    <None Include="Resources\clearheaderandfooter.svg" />
+    <None Include="Resources\bo_price.svg" />
+    <None Include="Resources\icons8-1-64.png" />
+    <None Include="Resources\back.png" />
+    <None Include="Resources\icons8-0-64.png" />
+    <None Include="Resources\icons8-9-64.png" />
+    <None Include="Resources\icons8-8-key-64.png" />
+    <None Include="Resources\icons8-7-64.png" />
+    <None Include="Resources\icons8-6-64.png" />
+    <None Include="Resources\icons8-5-64.png" />
+    <None Include="Resources\icons8-4-64.png" />
+    <None Include="Resources\icons8-3-64.png" />
+    <None Include="Resources\icons8-2-64.png" />
+    <None Include="Resources\close_32x32.png" />
+    <None Include="Resources\close_32x321.png" />
+    <None Include="Resources\icons8-search-64.png" />
+    <Content Include="Resources\icons8-squaaare-64.png" />
+    <Content Include="Resources\icons8-square-80.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

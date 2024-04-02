@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4341fd363e41459b8605c4c12ae0eadf" Name="Diagram1">
+        <EntityTypeShape EntityType="DbTasarimRehberimModel.TblCizim" Width="1.5" PointX="0.875" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbTasarimRehberimModel.TblMalzemeler" Width="1.5" PointX="3.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbTasarimRehberimModel.TblMetraj" Width="1.5" PointX="0.875" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbTasarimRehberimModel.TblPlanlarim" Width="1.5" PointX="3.25" PointY="3" IsExpanded="true" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
